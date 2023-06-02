@@ -6,10 +6,10 @@ public class Motoboy extends Funcionario{
     
     private String placaDaMoto;
 
-    public Motoboy(String nome, String cpf, String rg, Genero genero, Setor setor, double salarioBase, LocalDate dataAdmissão) {
+    public Motoboy(String placaDaMoto, String nome, String cpf, String rg, Genero genero, Setor setor, double salarioBase, LocalDate dataAdmissão) {
         super(nome, cpf, rg, genero, setor, salarioBase, dataAdmissão);
+        this.placaDaMoto = placaDaMoto;
     }
-    
     
 
     public String getPlacaDaMoto() {
@@ -22,12 +22,15 @@ public class Motoboy extends Funcionario{
 
     @Override
     public String toString() {
-        return "\n Placa Da Moto:" + placaDaMoto;
+        return "\n Motoboy: " +
+                super.toString() +
+                "placaDaMoto=" + placaDaMoto;
     }
 
+    
     @Override
     public double getSalarioFinal() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return super.salarioBase;
     }
     
     

@@ -13,14 +13,7 @@ public enum Genero {
         this.caracter = caracter;
     }
 
-    public static Genero getMASCULINO() {
-        return MASCULINO;
-    }
-
-    public static Genero getFEMININO() {
-        return FEMININO;
-    }
-
+    
     public String getTexto() {
         return texto;
     }

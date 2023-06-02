@@ -18,6 +18,12 @@ public abstract class CargoDeConfianca extends Funcionario{
     public void setBonificacao(Bonificacao bonificacao) {
         this.bonificacao = bonificacao;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "\n Bonificacao: " + bonificacao + '}';
+    }
     
     
     

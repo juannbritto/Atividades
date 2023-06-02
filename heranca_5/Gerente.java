@@ -8,18 +8,23 @@ public class Gerente extends CargoDeConfianca{
         super(bonificacao, nome, cpf, rg, genero, setor, salarioBase, dataAdmissão);
     }
 
-    public Bonificacao getBonificacao() {
-        return bonificacao;
-    }
-
-    public void setBonificacao(Bonificacao bonificacao) {
-        this.bonificacao = bonificacao;
-    }
 
     @Override
     public double getSalarioFinal() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        double salarioFinal =0;
+        salarioFinal += super.salarioBase * super.bonificacao.valor;
+        salarioFinal += super.salarioBase;
+        
+        return salarioFinal;
     }
+
+    @Override
+    public String toString() {
+        return "\n Gerente: " + 
+                super.toString() +
+                "\n Salario Final: " + this.getSalarioFinal();
+    }
+
     
     
 }

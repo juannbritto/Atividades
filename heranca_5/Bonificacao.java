@@ -2,8 +2,8 @@ package heranca_5;
 
 public enum Bonificacao {
     
-    GERENTE(0.2),
-    DIRETOR(0.4);
+    GERENTE(0.2), //salarioBase * (20/100)
+    DIRETOR(0.4);//salarioBase * (40/100)
     
     protected double valor;
 
@@ -11,17 +11,11 @@ public enum Bonificacao {
         this.valor = valor;
     }
 
-    public static Bonificacao getGERENTE() {
-        return GERENTE;
-    }
-
-    public static Bonificacao getDIRETOR() {
-        return DIRETOR;
-    }
-
     public double getValor() {
         return valor;
     }
+
+    
     
     
 }

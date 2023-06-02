@@ -79,6 +79,17 @@ public abstract class Funcionario {
     public void setDataAdmissão(LocalDate dataAdmissão) {
         this.dataAdmissão = dataAdmissão;
     }
+
+    @Override
+    public String toString() {
+        return "\n Nome: " + nome + 
+                "\n CPF: " + cpf + 
+                "\n RG: " + rg + 
+                "\n Genero: " + genero.texto + 
+                "\n Setor: " + setor.texto + 
+                "\n Salario Base: " + salarioBase + 
+                "\n Data de Admissão: " + dataAdmissão;
+    }
     
     
 }
